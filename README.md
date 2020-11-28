@@ -1,24 +1,42 @@
-# react-starter-template
-Template to a create react projects from scratch without any bloatware that comes with cra. 
+# React Starter Template
 
-The only extra library apart from vanilla react is added support for `.css` and `.scss/.sass` files.
+This template repository is the easiast way to create react projects from scratch without any bloatware that comes with `create-react-app`.\
+Unlike CRA, it has only the minimum packages required to get a `react` project up and running. This results in a much lighter application and snappier performance.
+### Built With
+The only extra package configured along with vanila `react` is added support for `.scss` and `.sass` files.
+- `react 17.0.x`
+- `babel 7.12.x`
+- `webpack cli 4.x`
+- `sass`
 
-Note: This repository is configured for [`Dart Sass`](https://sass-lang.com/dart-sass). A [node-sass](https://github.com/sass/node-sass) version is in the works.
+Note: This repository is configured with [Dart Sass](https://sass-lang.com/dart-sass) since it is recommended by webpack. A [node-sass](https://github.com/sass/node-sass) version is in the works.
 
 ## Getting Started
-### Method 1 (Recommended)
-1. Click on [Use this template](https://github.com/ekanshsinghal/react-starter-template/generate) button in top right corner to create a new repository from this template.
+
+### Prerequisites
+- npm
+
+### Installation 
+#### Method 1 (Recommended)
+1. Click on [`Use this template`](https://github.com/ekanshsinghal/react-starter-template/generate) button in top right corner to create a new repository from this template.
 2. Give a name to your repository and click Next.
-3. Download and install dependencies
+3. Clone the repository
 ```
 git clone <your repository path>        # eg. https://github.com/ekanshsinghal/react-starter-template.git
-cd <repository name>                    # ed. cd react-starter-template
+```
+4. Install NPM packages
+```
+cd <repository name>                    # eg. cd react-starter-template
 npm install
 ```
 
-### Method 2 (clone using CLI)
+#### Method 2 (clone using CLI)
+1. Clone the repository
 ```
 git clone https://github.com/ekanshsinghal/react-starter-template.git
+```
+2. Install NPM packages
+```
 cd react-starter-template
 npm install
 ```
@@ -39,3 +57,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
