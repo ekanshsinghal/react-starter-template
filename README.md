@@ -1,9 +1,9 @@
 # react-starter-template
 Template to a create react projects from scratch without any bloatware that comes with cra. 
 
-Only extra over creat reast JSX is added support for `.css` and `.scss/.sass` files.
+The only extra library apart from vanilla react is added support for `.css` and `.scss/.sass` files.
 
-Note: This repository is configured for [Dart Sass](https://sass-lang.com/dart-sass). A [node-sass](https://github.com/sass/node-sass) version is in the works.
+Note: This repository is configured for [`Dart Sass`](https://sass-lang.com/dart-sass). A [node-sass](https://github.com/sass/node-sass) version is in the works.
 
 ## Getting Started
 ### Method 1 (Recommended)
