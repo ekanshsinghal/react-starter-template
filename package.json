@@ -1,7 +1,7 @@
 {
 	"name": "react-starter-template",
 	"version": "1.0.0",
-	"description": "Template to create react projects from scratch with no bloatware.",
+	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack serve --config webpack.dev.js",
@@ -9,7 +9,7 @@
 	},
 	"keywords": [],
 	"author": "",
-	"license": "GPL-3.0-or-later",
+	"license": "MIT",
 	"dependencies": {
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1"
@@ -19,7 +19,11 @@
 		"@babel/preset-env": "^7.12.7",
 		"@babel/preset-react": "^7.12.7",
 		"babel-loader": "^8.2.2",
+		"css-loader": "^5.0.1",
 		"html-webpack-plugin": "^4.5.0",
+		"sass": "^1.29.0",
+		"sass-loader": "^10.1.0",
+		"style-loader": "^2.0.0",
 		"webpack": "^5.8.0",
 		"webpack-cli": "^4.2.0",
 		"webpack-dev-server": "^3.11.0"
