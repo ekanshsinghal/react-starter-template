@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: ["@babel/polyfill", path.resolve(__dirname, 'src/index.js')],
+	devtool: 'source-map',
+	entry: [path.resolve(__dirname, 'src/index.js')],
 	mode: 'development',
 	output: {
 		path: path.join(__dirname, '/dist'),
@@ -11,7 +13,7 @@ module.exports = {
 	devServer: {
 		inline: true,
 		port: 3000,
-		hot: true
+		hotOnly: true
 	},
 	module: {
 		rules: [
@@ -25,7 +27,7 @@ module.exports = {
                 },
 			}, {
 				// config for loading sass and scss files
-				test: /\.s[ac]ss$/i,
+				test: /\.(s*)css$/,
 				use: [
 					"style-loader",
 					"css-loader",
@@ -37,14 +39,15 @@ module.exports = {
 				use: ['style-loader', 'css-loader'],
 			}, {
 				// config for loading image files
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				type: 'asset/resource',
-			}, {
-				// config for loading fonts
-				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource',
 			}
 		]
 	},
-	plugins: [new HtmlWebpackPlugin({template: './public/index.html'})]
+	plugins: [
+		new HtmlWebpackPlugin({template: './public/index.html'}),
+		new webpack.ProvidePlugin({
+			process: 'process/browser'
+		})
+	]
 }

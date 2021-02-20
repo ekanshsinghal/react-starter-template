@@ -3,13 +3,13 @@
 This template repository is the easiast way to create react projects from scratch without any bloatware that comes with `create-react-app`.\
 Unlike CRA, it has only the minimum packages required to get a `react` project up and running. This results in a much lighter application and snappier performance.
 ### Built With
-The only extra package configured along with vanila `react` is added support for `.scss` and `.sass` files.
+The only extra package configured along with vanila `react` is added support for `.scss` files.
 - `react 17.0.x`
 - `babel 7.12.x`
 - `webpack cli 4.x`
-- `sass`
+- `node-sass`
 
-Note: This repository is configured with [Dart Sass](https://sass-lang.com/dart-sass) since it is recommended by webpack. A [node-sass](https://github.com/sass/node-sass) version is in the works.
+Note: This repository is configured with [node-sass](https://github.com/sass/node-sass) and not [Dart Sass].
 
 ## Getting Started
 
@@ -50,9 +50,9 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ```
-npm build
+npm run build
 ```
-Builds the app for production to the `dist` folder.\
+Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\

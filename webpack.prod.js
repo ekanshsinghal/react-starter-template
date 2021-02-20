@@ -1,11 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: ["@babel/polyfill", path.resolve(__dirname, 'src/index.js')],
+	entry: [path.resolve(__dirname, 'src/index.js')],
     mode: 'production',
 	output: {
-		path: path.join(__dirname, '/dist'),
+		path: path.join(__dirname, '/build'),
 		filename: '[name].bundle.js'
 	},
 	module: {
@@ -13,9 +14,12 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader'
+				use: {
+                    loader: "babel-loader",
+                    options: {presets: ["@babel/env"]}
+                },
 			}, {
-				test: /\.s[ac]ss$/i,
+				test: /\.(s*)css$/,
 				use: [
 					"style-loader",
 					"css-loader",
@@ -25,13 +29,15 @@ module.exports = {
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader'],
 			}, {
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				type: 'asset/resource',
-			}, {
-				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource',
 			}
 		]
 	},
-	plugins: [new HtmlWebpackPlugin({template: './public/index.html'})]
+	plugins: [
+		new HtmlWebpackPlugin({template: './public/index.html'}),
+		new webpack.ProvidePlugin({
+			process: 'process/browser'
+		})
+	]
 }
