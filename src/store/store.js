@@ -8,4 +8,5 @@ const store = configureStore({
 			? getDefaultMiddleware().concat(createLogger)
 			: getDefaultMiddleware(),
 });
+
 export default store;
