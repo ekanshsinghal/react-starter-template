@@ -15,6 +15,7 @@ Note: This repository is configured with [node-sass](https://github.com/sass/nod
 
 ### Prerequisites
 - npm
+- yarn
 
 ### Installation 
 #### Method 1 (Recommended)
@@ -27,7 +28,7 @@ git clone <your repository path>        # eg. https://github.com/ekanshsinghal/r
 4. Install NPM packages
 ```
 cd <repository name>                    # eg. cd react-starter-template
-npm install
+yarn
 ```
 
 #### Method 2 (clone using CLI)
@@ -38,19 +39,19 @@ git clone https://github.com/ekanshsinghal/react-starter-template.git
 2. Install NPM packages
 ```
 cd react-starter-template
-npm install
+yarn
 ```
 
 ## Available Scripts
 In the project directory, you can run:
 ```
-npm start
+yarn start
 ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ```
-npm run build
+yarn run build
 ```
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
