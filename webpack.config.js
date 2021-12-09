@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -15,6 +14,7 @@ module.exports = (_, argv) => {
 		output: {
 			path: path.join(__dirname, '/dist'),
 			filename: '[name].bundle.js',
+			clean: true,
 		},
 		devServer: {
 			historyApiFallback: true,
@@ -50,7 +50,6 @@ module.exports = (_, argv) => {
 			splitChunks: { chunks: 'all' },
 		},
 		plugins: [
-			new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({ template: './public/index.html' }),
 			new MiniCssExtractPlugin(),
 			isDevelopment && new webpack.HotModuleReplacementPlugin(),
