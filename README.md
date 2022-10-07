@@ -1,5 +1,13 @@
 # React Starter Template
 
+![MIT license](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub](https://img.shields.io/badge/Language-JavaScript-blue.svg)
+![Yarn](https://img.shields.io/badge/Yarn-v1.22.19-green.svg)
+![npm](https://img.shields.io/badge/npm-v8.9.0-green.svg)
+![npm](https://img.shields.io/badge/npm-v8.9.0-green.svg)
+![Open issues](https://img.shields.io/github/issues/ekanshsinghal/react-starter-template)
+![Repo Size](https://img.shields.io/github/repo-size/ekanshsinghal/react-starter-template?color=brightgreen)
+
 This template repository is the easiast way to create react projects from scratch without any bloatware that comes with `create-react-app`.\
 Unlike CRA, it has only the minimum packages required to get a `react` project up and running. This results in a much lighter application and snappier performance.
 
@@ -7,8 +15,8 @@ Unlike CRA, it has only the minimum packages required to get a `react` project u
 
 The only extra package configured along with vanila `react` is added support for `.scss` files.
 
--   `react 17.0.x`
--   `babel 7.12.x`
+-   `react 18.2.x`
+-   `babel 7.18.x`
 -   `webpack cli 4.x`
 -   `sass` (Dart Sass)
 
